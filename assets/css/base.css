@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+:root {
+    --white: #fff;
+    --black: #262626;
+    --red: #971212;
+
+    --transition: 0.3s all ease;
+
+    --fs-title: 60px;
+    --fs-content: 25px;
+    --fs-subtitle: 18px;
+}
+
+@media only screen and (max-width: 991px) {
+    :root {
+        --fs-title: 30px;
+        --fs-content: 19px;
+        --fs-subtitle: 17px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    :root {
+        --fs-title: 24px;
+        --fs-content: 18px;
+        --fs-subtitle: 17px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Forum", serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--black);
+    border-radius: 1rem;
+}
+
+input {
+    border: 0;
+    padding-left: 10px;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    /* white-space: nowrap; */
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+@media (max-width: 1399px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        width: 100%;
+    }
+}

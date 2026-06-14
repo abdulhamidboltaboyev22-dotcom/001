@@ -1,0 +1,154 @@
+.age {
+    padding: 90px 0 140px;
+    position: relative;
+}
+
+.age .card__age {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.age .card__age__text .age__title {
+    font-size: var(--fs-title);
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.age .card__age__text .age__text {
+    font-size: var(--fs-content);
+    color: var(--black);
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.age .card__age__link {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.age .card__age__row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.age .age__link {
+    position: relative;
+    display: block;
+    padding: 16px 20px 16px 56px;
+    width: 320px;
+    border-radius: 10px;
+    border: 2px solid var(--red);
+    color: var(--black);
+    text-decoration: none;
+    transition: var(--transition);
+    background: #fff;
+}
+
+.age .age__link::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--red);
+    background: transparent;
+}
+
+.age .age__link::after {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+    transition: background 0.18s;
+}
+
+.age .age__link.selected {
+    box-shadow: 0 8px 28px rgba(151, 18, 18, 0.06);
+    border-color: var(--red);
+}
+
+.age .age__link.selected::after {
+    background: var(--red);
+}
+
+.age .age__input {
+    display: none;
+}
+
+.age .card__age__button {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.age .age__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    color: var(--white);
+    background-color: var(--red);
+    border-radius: 10px;
+    text-decoration: none;
+    min-width: 48px;
+    height: 48px;
+}
+
+.age .age__button.next {
+    width: 100px;
+    padding: 12px 28px;
+}
+
+.age .age__button:hover {
+    background-color: #740a0a;
+}
+
+@media only screen and (max-width: 991px) {
+    .age .card__age__link {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .age .age__link {
+        width: 48%;
+    }
+
+    .age .card__age__button {
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .age {
+        padding: 60px 0 120px;
+    }
+
+    .age .age__link {
+        width: 48%;
+        padding: 12px 14px 12px 52px;
+    }
+
+    .age .age__link::before {
+        left: 14px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .age .card__age__button {
+        margin-left: auto;
+    }
+}
